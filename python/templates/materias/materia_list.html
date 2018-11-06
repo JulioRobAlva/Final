@@ -1,0 +1,33 @@
+{% extends 'materias/base.html' %}
+{% block content %}
+<div class="container">
+  <h1>Lista de Materias <a href="{% url 'materia_nuevo' %}" class="btn btn-success">Nuevo</a></h1>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for materia in materias %}
+          <tr class="table-active">
+            <th>{{materia.nombre}}</th>
+            <th>{{materia.descripcion}}</th>
+            <th>{{materia.tipo}}</th>
+            <th>{{materia.fecha}}</th>
+            <th>
+              <a href="{% url 'materia_detalle' pk=materia.pk %}" class="bt btn-warning"><span class="glyphicon glyphicon-info-sign"></span>Detalle</a>
+              <a href="{% url 'materia_editar' pk=materia.pk %}" class="bt btn-info"><span class="glyphicon glyphicon-pencil">Editar</span></a>
+              <a href="{% url 'materia_eliminar' pk=materia.pk %}" class="bt btn-danger"><span class="glyphicon glyphicon-trash"></span>Eliminar</a>
+            </th>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock %}

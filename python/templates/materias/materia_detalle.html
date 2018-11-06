@@ -1,0 +1,14 @@
+{% extends 'materias/base.html' %}
+
+{% block content %}
+    <h1 class="text-success">Nombre:</h1>
+    <h2 class="text-info">{{materia.nombre}}</h2>
+    <h1 class="text-success">Descripcion:</h1>
+    <h2 class="text-info">{{materia.descripcion}}</h2>
+    <h1 class="text-success">Fecha:</h1>
+    <h2 class="text-info">{{materia.fecha}}</h2>
+    <h1 class="text-success">Tipo:</h1>
+    <h2 class="text-info">{{materia.tipo}}</h2>
+    <h1 class="text-success">Alumnos:</h1>
+    <h2 class="text-info">{{materia.alumnos}}</h2>
+{% endblock %}
