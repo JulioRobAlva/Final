@@ -3,6 +3,8 @@ from . import views
 urlpatterns = [
 
     url(r'^$', views.lista_materias, name ='lista_materias'),
+    #url(r'^$', views.LoginView.as_view(template_name='registration/login.html'), name='login'),
+
     url(r'^materia/(?P<pk>[0-9]+)/$', views.materia_detalle, name='materia_detalle'),
     url(r'^materia/nuevo/$', views.materia_nuevo, name='materia_nuevo'),
     url(r'^materia/(?P<pk>[0-9]+)/edit/$', views.materia_editar, name='materia_editar'),

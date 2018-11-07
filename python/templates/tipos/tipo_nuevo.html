@@ -1,6 +1,6 @@
 {% extends 'materias/base.html' %}
     {% block content %}
-        <h1>Nuevo Materia</h1>
+        <h1>Nuevo Tipo de Materia</h1>
         <form method="POST" class="post-form">{% csrf_token %}
         <div class="form-group">
           {{ form.as_p }}
