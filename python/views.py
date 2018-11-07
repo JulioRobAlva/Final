@@ -70,7 +70,7 @@ def alumno_nuevo(request):
 @login_required
 def alumno_detalle(request, pk):
     alumno = get_object_or_404(Alumno, pk=pk)
-    return render(request, 'alumnos/alumno_detalle.html', {'alumno': alumno})
+    return render(request, 'alumno/alumno_detalle.html', {'alumno': alumno})
 
 @login_required
 def alumno_editar(request, pk):
@@ -83,7 +83,7 @@ def alumno_editar(request, pk):
             return redirect('lista_alumnos')
     else:
         form = AlumnoForm(instance=alumno)
-    return render(request, 'alumnos/alumno_editar.html', {'form': form})
+    return render(request, 'alumno/alumno_editar.html', {'form': form})
 
 @login_required
 def alumno_eliminar(request, pk):
