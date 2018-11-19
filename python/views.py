@@ -47,7 +47,7 @@ def materia_nuevo(request):
             messages.add_message(request, messages.SUCCESS, 'Guardado!')
     else:
         formulario = MateriaForm()
-    return render(request, 'materias/materia_list.html', {'formulario': formulario})
+    return render(request, 'materias/materia_nuevo.html', {'formulario': formulario})
 
 #ALUMNO
 @login_required
@@ -65,7 +65,7 @@ def alumno_nuevo(request):
             return redirect('lista_alumnos')
     else:
         form = AlumnoForm()
-    return render(request, 'alumno/alumno_list.html', {'form': form})
+    return render(request, 'alumno/alumno_nuevo.html', {'form': form})
 
 @login_required
 def alumno_detalle(request, pk):
@@ -108,7 +108,7 @@ def tipo_nuevo(request):
             return redirect('lista_tipo')
     else:
         form = TipoForm()
-    return render(request, 'tipos/tipo_list.html', {'form': form})
+    return render(request, 'tipos/tipo_nuevo.html', {'form': form})
 
 @login_required
 def tipo_detalle(request, pk):
