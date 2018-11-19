@@ -3,12 +3,19 @@
 {% block content %}
     <h1 class="text-success">Nombre:</h1>
     <h2 class="text-info">{{materia.nombre}}</h2>
-    <h1 class="text-success">Profesor:</h1>
+    <h1 class="text-success">Descripcion:</h1>
     <h2 class="text-info">{{materia.descripcion}}</h2>
     <h1 class="text-success">Fecha:</h1>
     <h2 class="text-info">{{materia.fecha}}</h2>
-    <h1 class="text-success">Curso:</h1>
+    <h1 class="text-success">Profesor:</h1>
     <h2 class="text-info">{{materia.tipo}}</h2>
-    <h1 class="text-success">Alumnos:</h1>
-    <h2 class="text-info">{{materia.alumnos}}</h2>
+    <h1 class="text-success">Cursos:</h1>
+    <h2 class="text-info">{{% for materia in materias%}
+        {{materia.nombre}}
+        {% for alumno in alumnos %}
+            {{alumno.nombre}}
+        {% endfor %}
+    {% endfor %}}</h2>
+
+
 {% endblock %}

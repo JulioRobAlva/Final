@@ -12,7 +12,7 @@
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand" href="{% url 'lista_materias' %}"> Asignaciones de Materias </a>
+    <a class="navbar-brand" href="{% url 'lista_materias' %}"> Pensum </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,28 +20,28 @@
       <div class="collapse navbar-collapse" id="navbarColor01">
         <ul class="navbar-nav mr-auto">
 
-          <a class="nav-link" href="{% url 'lista_materias' %}" class="top-menu"><span class="glyphicon glyphicon-list">  Materias </span></a>
+          <a class="nav-link" href="{% url 'lista_materias' %}" class="top-menu"><span class="glyphicon glyphicon-list">  Grados </span></a>
           </li>
 
           {% if user.is_authenticated %}
 
           <li class="nav-item active">
-          <a class="nav-link" href="{% url 'materia_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nueva Materia </span></a>
+          <a class="nav-link" href="{% url 'materia_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nuevo Grado </span></a>
           </li>
 
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'lista_tipo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Curso </span></a>
+          <a class="nav-link" href="{% url 'lista_tipo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Profesores </span></a>
           </li>
 
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'tipo_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nuevo Curso </span></a>
+          <a class="nav-link" href="{% url 'tipo_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nuevo Profesor </span></a>
           </li>
 
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'lista_alumnos' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Alumos </span></a>
+          <a class="nav-link" href="{% url 'lista_alumnos' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Materia </span></a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="{% url 'alumno_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nuevo Alumo </span></a>
+          <a class="nav-link" href="{% url 'alumno_nuevo' %}" class="top-menu"><span class="glyphicon glyphicon-list"> Nueva materia </span></a>
           </li>
 
 
